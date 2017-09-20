@@ -42,7 +42,7 @@ class Sahibinden{
     static function Liste($kategoriLink, $sayfa = '0'){
         //21.09.2017 listedeki ilanların bilgilerinin alınması
         $items = array();
-        $page = '?pagingOffset=' . $sayfa;
+        $page = '?pagingSize=50&pagingOffset=' . $sayfa;
         $html = self::Curl( self::$ana_url . '/' . $kategoriLink . $page);
         $pattern = '/<tr data-id="\d*" class="searchResultsItem.*?">.*?<\/tr>/';
         preg_match_all( $pattern, $html, $result, PREG_SET_ORDER, 0);
