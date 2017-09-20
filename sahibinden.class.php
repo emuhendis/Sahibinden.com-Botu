@@ -56,6 +56,7 @@ class Sahibinden{
                 'url' => self::$ana_url . $title[1]
 			);
         }
+	//21.09.2017 ilan numarası çekme (id)
         return $items;
     }
     static function Detay($url = NULL){
